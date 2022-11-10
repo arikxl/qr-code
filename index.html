@@ -6,13 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inertia - QR Code Generator</title>
     <style>
+        body{
+            min-height: 100vh;
+        }
         .b-bottom{
             border-bottom: solid 0.5px;
         }
         #spinner{
             display: none;
         }
-
+        #footer{
+            position: sticky;
+            top:100%;
+        }
     </style>
 </head>
 <body>
@@ -57,7 +63,8 @@
             </div>
         </div>
 
-        <div class="max-w-5xl m-auto flex flex-col text-center align-center justify-center mt-20 mb-20">
+        <div id="generated"
+            class="max-w-5xl m-auto flex flex-col text-center align-center justify-center mt-20 mb-20">
             <div id="spinner" role="status">
           <svg
             class="inline mr-2 w-24 h-24 text-gray-200 animate-spin dark:text-gray-600 fill-red-500"
@@ -84,6 +91,15 @@
         </div>
 
     </main>
+    <footer class="bg-red-500 p-4 " id="footer">
+        <div class="m-auto max-w-5xl align-center flex justify-center">
+            <div class="text-white font-bold text-xl ">
+                <a href="https://github.com/arikxl" target="_blank">
+                    ©️Arik Alexandrov - Inertia 2022
+                </a>
+            </div>
+        </div>
+    </footer>
     <script>
         tailwind.config = {
           theme: {
